@@ -253,67 +253,67 @@ const headerFonts = {
 };
 
 const basicFonts = {
-  mascarpone: {
-    'font-size': '20px',
-    'line-height': '28px',
-    'font-weight': '400',
+  '.mascarpone': {
+    'fontSize': '20px',
+    'lineHeight': '28px',
+    'fontWeight': '400',
   },
-  brie: {
-    'font-size': '20px',
-    'line-height': '24px',
-    'font-weight': '400',
+  '.brie': {
+    'fontSize': '20px',
+    'lineHeight': '24px',
+    'fontWeight': '400',
   },
-  parmigiano: {
-    'font-size': '16px',
-    'line-height': '24px',
-    'font-weight': '400',
+  '.parmigiano': {
+    'fontSize': '16px',
+    'lineHeight': '24px',
+    'fontWeight': '400',
   },
-  feta: {
-    'font-size': '16px',
-    'line-height': '20px',
-    'font-weight': '400',
+  '.feta': {
+    'fontSize': '16px',
+    'lineHeight': '20px',
+    'fontWeight': '400',
   }
 }; 
 
 
 const additionalFonts = {  
-  mozzarella: {
-    'font-size': '13px',
-    'line-height': '16px',
-    'font-weight': '400',
+  '.mozzarella': {
+    'fontSize': '13px',
+    'lineHeight': '16px',
+    'fontWeight': '400',
   },
-  roquefort: {
-    'font-size': '13px',
-    'line-height': '16px',
-    'font-weight': '700',
+  '.roquefort': {
+    'fontSize': '13px',
+    'lineHeight': '16px',
+    'fontWeight': '700',
   },
-  сaprino: {
-    'font-size': '10px',
-    'line-height': '12px',
-    'font-weight': '400',
+  '.сaprino': {
+    'fontSize': '10px',
+    'lineHeight': '12px',
+    'fontWeight': '400',
   }
 };
 
 const controlsFonts = { 
-  maasdam: {
-    'font-size': '20px',
-    'line-height': '24px',
-    'font-weight': '500',
+  '.maasdam': {
+    'fontSize': '20px',
+    'lineHeight': '24px',
+    'fontWeight': '500',
   },
-  sulguni: {
-    'font-size': '16px',
-    'line-height': '20px',
-    'font-weight': '500',
+  '.sulguni': {
+    'fontSize': '16px',
+    'lineHeight': '20px',
+    'fontWeight': '500',
   },
-  briscola: {
-    'font-size': '13px',
-    'line-height': '16px',
-    'font-weight': '500',
+  '.briscola': {
+    'fontSize': '13px',
+    'lineHeight': '16px',
+    'fontWeight': '500',
   },
-  edam: {
-    'font-size': '10px',
-    'line-height': '12px',
-    'font-weight': '500',
+  '.edam': {
+    'fontSize': '10px',
+    'lineHeight': '12px',
+    'fontWeight': '500',
   }
 };
 
@@ -330,15 +330,62 @@ const screens = {
   sm: '480px',
   md: '768px',
   lg: '976px',
-  xl: '1440px',
+  // xl: '1440px',
+  xl: '1280px',
 }
 
 
 import { defineConfig } from 'windicss/helpers'
 import plugin from 'windicss/plugin'
 import colors from 'windicss/colors'
+
+
+function range(size, startAt = 1) {
+  return Array.from(Array(size).keys()).map(i => i + startAt)
+}
+
 export default defineConfig({
-  // preflight: false,
+
+
+  safelist: [
+    // range(10).map(i => `mt-${i}`), // mt-1 to mt-10
+    range(9).map(i => `bg-blue-${i}00`),
+    range(9).map(i => `bg-gray-${i}00`),
+    range(9).map(i => `bg-indigo-${i}00`),
+    range(9).map(i => `bg-pink-${i}00`),
+    range(9).map(i => `bg-green-${i}00`),
+    range(9).map(i => `bg-оrange-${i}00`),
+    Object.keys(rirColors).map(i => `bg-${i}`),
+    [
+      "primo",
+      "gouda",
+      "cheddar",
+      "camembert",
+      "ricotta",
+      "burrata",
+      "taleggio",
+      "comte",
+      "bryndza",
+      "tulum",
+      //
+      "mascarpone",
+      "brie",
+      "parmigiano",
+      "feta",
+      //
+      "mozzarella",
+      "roquefort",
+      "сaprino",
+      //
+      "maasdam",
+      "sulguni",
+      "briscola",
+      "edam"
+  ]
+  ],
+
+
+
   darkMode: 'class',
   theme: {
     fontFamily: {
@@ -358,7 +405,7 @@ export default defineConfig({
     },
     // extend: {
     //   colors: {
-    //     ...rirColors,
+    //     rirColors,
     //   }
     // },
   },
@@ -367,77 +414,29 @@ export default defineConfig({
   // 'primo gouda cheddar camembert ricotta burrata taleggio comte bryndza tulum'
   // safelist: ['primo', 'gouda', 'cheddar', 'camembert', 'ricotta', 'burrata', 'taleggio', 'comte', 'bryndza', 'tulum'],
   extract: {
-    // accepts globs and file paths relative to project root
-    // include: [
-    //   'index.html',
-    //   'src/**/*.{vue,html,jsx,tsx}',
-    // ],
+
     exclude: [
-      '*.{vue}', //
+      '*.{vue}',
+      // '**/*.{vue,html,jsx,tsx}',
       'node_modules/**/*',
       '.git/**/*',
     ],
+
+
+    // include: ['src/**/*.{vue,html,jsx,tsx}'],
+    // exclude: ['node_modules', '.git'],
   },
   plugins: [
 
     plugin(({ addUtilities }) => {
-      const newUtilities = {
-        '.primo': {
-          'fontSize': '72px',
-          'lineHeight': '72px',
-          'fontWeight': '700',
-        },
-        '.gouda': {
-          'fontSize': '56px',
-          'lineHeight': '56px',
-          'fontWeight': '700',
-        },
-        '.cheddar': {
-          'fontSize': '40px',
-          'lineHeight': '44px',
-          'fontWeight': '700',
-        },
-        '.camembert': {
-          'fontSize': '32px',
-          'lineHeight': '36px',
-          'fontWeight': '700',
-        },
-        '.ricotta': {
-          'fontSize': '28px',
-          'lineHeight': '32px',
-          'fontWeight': '700',
-        },
-        '.burrata': {
-          'fontSize': '24px',
-          'lineHeight': '28px',
-          'fontWeight': '700',
-        },
-        '.taleggio': {
-          'fontSize': '20px',
-          'lineHeight': '24px',
-          'fontWeight': '700',
-        },
-        '.comte': {
-          'fontSize': '20px',
-          'lineHeight': '28px',
-          'fontWeight': '700',
-        },
-        '.bryndza': {
-          'fontSize': '16px',
-          'lineHeight': '20px',
-          'fontWeight': '700',
-        },
-        '.tulum': {
-          'fontSize': '16px',
-          'lineHeight': '24px',
-          'fontWeight': '700',
-        }
-      };
-      addUtilities(headerFonts)
+      addUtilities({
+        ...RIR_fonts
+      })
     }),
 
     require('windicss/plugin/typography'),
     require('windicss/plugin/aspect-ratio'),
+    require('@windicss/plugin-scrollbar'),
   ]
 
 })

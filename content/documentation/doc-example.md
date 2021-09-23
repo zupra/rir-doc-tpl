@@ -12,7 +12,7 @@ video: ''
 
 [this is a link](https://google.com)
 
-![this is an image](/images/cleavr_logo.png)
+<!-- ![this is an image](/images/cleavr_logo.png) -->
 
 1. This 
 2. is

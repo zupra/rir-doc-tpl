@@ -20,16 +20,16 @@
 
     <!-- Swap out the logo with one of your own - can be a link to your main site, a social icon, app login, etc. -->
     <a href="#" class="px-4">
-      <GlobeIcon class="mr-1 h-5 w-5 text-gray-700 hover:text-gray-800"  />
+      <!-- <GlobeIcon class="mr-1 h-5 w-5 text-gray-700 hover:text-gray-800"  /> -->
     </a>
   </div>
 </template>
 
 <script>
 
-import GlobeIcon from "~/components/GlobeIcon";
+// import GlobeIcon from "~/components/GlobeIcon";
 export default {
-  components: {GlobeIcon},
+  // components: {GlobeIcon},
   methods: {
     showMobileMenu () {
       this.$emit('showMobileMenu') // closes the mobile menu if in open state and when route changes
