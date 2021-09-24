@@ -3,11 +3,11 @@
 
   <section class="w-620px mx-auto">
 
-    <N-link to="/complaints" class="parmigiano opacity-72 hover:text-blue-600">
+    <N-link to="/templates/complaints" class="parmigiano opacity-72 hover:text-blue-600">
       / Обращения
     </N-link>
 
-    <h1 class="cheddar my-10 text-titanic">Новое обращение</h1>
+    <h1 class="cheddar my-10">Новое обращение</h1>
 
     <input 
       type="text"

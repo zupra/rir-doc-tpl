@@ -3,7 +3,7 @@
 
 <main class="container mx-auto px-8">
 
-  <header class="text-titanic flex justify-between">
+  <header class="flex justify-between">
     <div class="w-1/2">
       <h1 class="cheddar mb-4">Голосования</h1>
       <p class="parmigiano">На голосования выносятся только вопросы, касающиеся граждан города и относящиеся к компетенции Правительства и органов исполнительной власти города или области.</p>
@@ -27,7 +27,7 @@
 
   <div class="mt-12 flex flex-wrap gap-8">
 
-    <N-link to="/votings/item" class="Voting bg-rush p-5 w-1/4 flex-shrink flex-grow shadow-sm hover:shadow-lg rounded-3xl overflow-hidden text-titanic"
+    <N-link to="/templates/votings/item" class="Voting bg-rush p-5 w-1/4 flex-shrink flex-grow shadow-sm hover:shadow-lg rounded-3xl overflow-hidden"
       v-for="It in 15"
       :key="It.id"
     >

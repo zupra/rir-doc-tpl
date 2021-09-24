@@ -23,9 +23,9 @@
       @click="hasSidebar = !hasSidebar"
       xmlns="http://www.w3.org/2000/svg" 
       xmlns:xlink="http://www.w3.org/1999/xlink" 
-      version="1.1" width="48" height="48" 
+      version="1.1" width="44" height="44" 
       viewBox="0 0 24 24" 
-      fill="#214EB0">
+      fill="#81ABEE">
       <path :d="hasSidebar ? 'M5,13L9,17L7.6,18.42L1.18,12L7.6,5.58L9,7L5,11H21V13H5M21,6V8H11V6H21M21,16V18H11V16H21Z': 'M19,13H3V11H19L15,7L16.4,5.6L22.8,12L16.4,18.4L15,17L19,13M3,6H13V8H3V6M13,16V18H3V16H13Z'"/>
     </svg>
 
@@ -53,7 +53,7 @@ export default {
 #layout {
   display: grid;
   height: 100vh;
-  grid-template-rows: 48px 1fr;
+  grid-template-rows: 44px 1fr;
   grid-template-columns: 1fr;
   grid-template-areas:  
     'header'

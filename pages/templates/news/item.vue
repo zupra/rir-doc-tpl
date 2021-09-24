@@ -3,7 +3,7 @@
 
   <section class="w-620px mx-auto">
 
-    <N-link to="/news" class="parmigiano opacity-72 hover:text-blue-600">
+    <N-link to="templates/news" class="parmigiano opacity-72 hover:text-blue-600">
       / Новости
     </N-link>
 
@@ -43,7 +43,7 @@
 
   <div class="flex flex-wrap gap-8">
 
-    <N-link to="/news/item" class="Card w-1/4 h-1/2 flex-shrink flex-grow"
+    <N-link to="/templates/news/item" class="Card w-1/4 h-1/2 flex-shrink flex-grow"
       v-for="It in 3"
       :key="It.id"
     >

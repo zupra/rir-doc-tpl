@@ -1,9 +1,9 @@
 <template>
 
 
-<main class="xl:container mx-auto px-8">
+<main class="container mx-auto px-8">
 
-  <header class="text-titanic flex justify-between">
+  <header class="flex justify-between">
     <div class="w-1/2">
       <h1 class="cheddar mb-4">Обращения</h1>
       <p class="parmigiano">Вместе мы сможем сделать наш город лучше! Следите за ходом и результатами работ по обращениям, которые подают жители города и области. </p>
@@ -30,7 +30,7 @@
 
   <div class="flex flex-wrap gap-8">
 
-    <N-link to="/complaints/item" class="Card w-1/4 h-1/2 flex-shrink flex-grow shadow-lg rounded-3xl overflow-hidden"
+    <N-link to="/templates/complaints/item" class="Card group w-1/4 h-1/2 flex-shrink flex-grow shadow-lg rounded-16 overflow-hidden"
       v-for="It in 15"
       :key="It.id"
     >
@@ -53,7 +53,7 @@
 
       <picture class="">
         <img
-          class="" 
+          class="object-cover group-hover:scale-150" 
           :src="`https://picsum.photos/id/${It+500}/480/320`" alt="">
       </picture>
 
@@ -77,11 +77,14 @@ export default {
   position: relative;
 }
 
+/**/
 .Card:hover picture img {
   transform: scale(1.5);
-  /* mask-image: linear-gradient(360deg, rgba(4, 21, 62, 0.8) 0%, rgba(4, 21, 62, 0) 90%); */
-  /* mask-image: linear-gradient(rgba(0, 0, 0, .5), transparent); */
+  /* mask-image: linear-gradient(360deg, rgba(4, 21, 62, 0.8) 0%, rgba(4, 21, 62, 0) 90%);
+  mask-image: linear-gradient(rgba(0, 0, 0, .5), transparent); */
 }
+
+
 
 .Card__content {
   position: absolute;
@@ -92,7 +95,7 @@ export default {
 picture {
   position:relative;
   display:block;
-  height: 100%;
+  /* height: 100%; */
 }
 
 picture:after {
@@ -108,7 +111,7 @@ picture:after {
 picture img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
   transition: all .5s;
 }
 </style>

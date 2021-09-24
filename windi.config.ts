@@ -335,6 +335,15 @@ const screens = {
 }
 
 
+const RIR_borderRadius = {
+  4:'4px',
+  // 6:'6px',
+  8:'8px',
+  16:'16px',
+  24:'24px',
+}
+
+
 import { defineConfig } from 'windicss/helpers'
 import plugin from 'windicss/plugin'
 import colors from 'windicss/colors'
@@ -381,7 +390,7 @@ export default defineConfig({
       "sulguni",
       "briscola",
       "edam"
-  ]
+    ]
   ],
 
 
@@ -399,15 +408,14 @@ export default defineConfig({
     screens,
     colors: {
       ...colors,
-      // white: '#FFF',
-      ...rirColors_toTW,
+      ...rirColors_toTW, // reset colors
       ...rirColors,
     },
-    // extend: {
-    //   colors: {
-    //     rirColors,
-    //   }
-    // },
+    extend: {
+      borderRadius: {
+        ...RIR_borderRadius
+      },
+    },
   },
   // variants: {},
 

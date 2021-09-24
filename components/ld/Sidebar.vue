@@ -1,70 +1,51 @@
 <template>
 
 <div class="Sidebar flex flex-col p-4">
-  <div class="flex">
+  <div class="flex items-center text-sm">
     <img src="https://icongr.am/material/newspaper-variant-outline.svg?size=24&color=315cb2" alt="">
     <div class="ml-3 font-light tracking-wide text-gray-500">МАКЕТЫ</div>
   </div>
 
-  <!-- Новости -->
-  <div class="flex items-center my-3">
-    <div class="flex items-center justify-center h-8 w-8 bg-indigo-200 rounded-full">H</div>
-    <div class="ml-1 text-sm font-light tracking-wide text-gray-500">Новости</div>
-  </div>
-  <ol class="leading-none underline-green-500 list-square pl-5">
-    <li>
-      <N-link to="/news" 
-        class="text-gray-600 hover:text-blue-500 group flex items-center pb-3">
-        Новости (список)
-      </N-link>
-    </li>
-    <li>
-      <N-link to="/news/item" 
-        class="text-gray-600 hover:text-blue-500 group flex items-center pb-3">
-        Новости (страница новости)
-      </N-link>
-    </li>
-  </ol>
 
-  <!-- Обращения -->
-  <div class="flex items-center my-3">
-    <div class="flex items-center justify-center h-8 w-8 bg-orange-200 rounded-full">О</div>
-    <div class="ml-1 text-sm font-light tracking-wide text-gray-500">Обращения</div>
-  </div>
-  <ol class="leading-none underline-green-500 list-square pl-5">
-    <li>
-      <N-link to="/complaints" 
-        class="text-gray-600 hover:text-blue-500 group flex items-center pb-3">
-        Обращения (список)
-      </N-link>
-    </li>
-    <li>
-      <N-link to="/complaints/item" 
-        class="text-gray-600 hover:text-blue-500 group flex items-center pb-3">
-        Обращения (страница обращения)
-      </N-link>
-    </li>
-  </ol>
+  <div class="mt-4 mb-1 text-xs tracking-wide text-gray-500">НОВОСТИ</div>
+  <nav class="text-sm font-light flex flex-col leading-none gap-y-1 text-gray-600">
+    <N-link to="/templates/news" 
+      class="pl-1 py-1 hover:text-blue-600">
+      Новости (список)
+    </N-link>
+    <N-link to="/templates/news/item" 
+      class="pl-1 py-1 hover:text-blue-600">
+      Новости (страница новости)
+    </N-link>
+  </nav>
 
-  <!-- Голосования -->
-  <div class="flex items-center my-3">
-    <div class="flex items-center justify-center h-8 w-8 bg-pink-200 rounded-full">Г</div>
-    <div class="ml-1 text-sm font-light tracking-wide text-gray-500">Голосования</div>
-  </div>
-  <ol class="leading-none underline-green-500 list-square pl-5">
-    <li>
-      <N-link to="/votings" 
-        class="text-gray-600 hover:text-blue-500 group flex items-center pb-3">
-        Голосования (список)
-      </N-link>
-    </li>
-    <li>
-      <N-link to="/votings/item" 
-        class="text-gray-600 hover:text-blue-500 group flex items-center pb-3">
-        Голосования (страница голосования)
-      </N-link>
-    </li>
-  </ol>
+  <div class="mt-4 mb-1 text-xs tracking-wide text-gray-500">ОБРАЩЕНИЯ</div>
+  <nav class="ml-1 text-sm font-light flex flex-col leading-none gap-y-1 text-gray-600">
+    <N-link to="/templates/complaints" 
+      class="pl-1 py-1 hover:text-blue-600">
+      Обращения (список)
+    </N-link>
+    <N-link to="/templates/complaints/item" 
+      class="pl-1 py-1 hover:text-blue-600">
+      Обращения (страница обращения)
+    </N-link>
+  </nav>
+
+
+  <div class="mt-4 mb-1 text-xs tracking-wide text-gray-500">ГОЛОСОВАНИЯ</div>
+  <nav class="ml-1 text-sm font-light flex flex-col leading-none gap-y-1 text-gray-600">
+    <N-link to="/templates/votings" 
+      class="pl-1 py-1 hover:text-blue-600">
+      Голосования (список)
+    </N-link>
+    <N-link to="/templates/votings/item" 
+      class="pl-1 py-1 hover:text-blue-600">
+      Голосования (страница голосования)
+    </N-link>
+  </nav>
+
+
+ 
 
 
 
@@ -73,17 +54,17 @@
     UI
   </h3>
   <N-link to="/UI/colors" 
-  class="text-sm text-gray-500 hover:text-blue-500 group flex items-center pb-3 pl-3">
+  class="text-sm text-gray-500 hover:text-blue-500 flex items-center pb-3 pl-3">
     ЦВЕТ
   </N-link>
 
   <N-link to="/UI/typography" 
-  class="text-sm text-gray-500 hover:text-blue-500 group flex items-center pb-3 pl-3">
+  class="text-sm text-gray-500 hover:text-blue-500 flex items-center pb-3 pl-3">
     Типографика
   </N-link>
 
   <N-link to="/UI/badge" 
-  class="text-sm text-gray-500 hover:text-blue-500 group flex items-center pb-3 pl-3">
+  class="text-sm text-gray-500 hover:text-blue-500 flex items-center pb-3 pl-3">
     badge
   </N-link>
 
@@ -95,7 +76,7 @@
   <N-link to="/demo_5" 
   v-for="It in 10"
   :key="`5_${It}`"
-  class="text-sm text-gray-500 hover:text-blue-500 group flex items-center pb-3 pl-3">
+  class="text-sm text-gray-500 hover:text-blue-500 flex items-center pb-3 pl-3">
     Ссылка_{{It}}
   </N-link>
 
@@ -105,7 +86,7 @@
   <N-link to="/demo_4" 
   v-for="It in 10"
   :key="`4_${It}`"
-  class="text-sm text-gray-500 hover:text-blue-500 group flex items-center pb-3 pl-3">
+  class="text-sm text-gray-500 hover:text-blue-500 flex items-center pb-3 pl-3">
     Ссылка_{{It}}
   </N-link>
 </div>
@@ -120,11 +101,9 @@ export default {
 
 <style>
 
-.nuxt-link-active {
-
-}
+/* .nuxt-link-active {} */
 .Sidebar .nuxt-link-exact-active {
-  @apply text-blue-500 font-bold;
+  @apply text-blue-500 bg-gray-100;
 }
 
 
