@@ -27,7 +27,7 @@
 
   <div class="mt-12 flex flex-wrap gap-8">
 
-    <N-link to="/templates/votings/item" class="Voting bg-rush p-5 w-1/4 flex-shrink flex-grow shadow-sm hover:shadow-lg rounded-3xl overflow-hidden"
+    <N-link to="/templates/votings/item" class="Voting bg-rush p-5 w-1/4 flex-shrink flex-grow shadow-sm hover:shadow-lg rounded-16 overflow-hidden"
       v-for="It in 15"
       :key="It.id"
     >

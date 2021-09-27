@@ -17,7 +17,7 @@
 
     <picture class="block aspect-9/16 my-8">
       <img
-        class="shadow-lg rounded-3xl" 
+        class="shadow-lg rounded-16" 
         :src="`https://picsum.photos/id/490/900/600`" alt="">
     </picture>
 

@@ -25,6 +25,10 @@
       class="pl-1 py-1 hover:text-blue-600">
       Обращения (список)
     </N-link>
+    <N-link to="/templates/complaints/item_add" 
+      class="pl-1 py-1 hover:text-blue-600">
+      Обращения (Подать обращения)
+    </N-link>
     <N-link to="/templates/complaints/item" 
       class="pl-1 py-1 hover:text-blue-600">
       Обращения (страница обращения)
@@ -67,6 +71,13 @@
   class="text-sm text-gray-500 hover:text-blue-500 flex items-center pb-3 pl-3">
     badge
   </N-link>
+
+  <N-link to="/UI/avatar" 
+  class="text-sm text-gray-500 hover:text-blue-500 flex items-center pb-3 pl-3">
+    avatar
+  </N-link>
+
+
 
 
 
