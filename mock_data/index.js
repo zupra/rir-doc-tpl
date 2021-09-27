@@ -33,7 +33,9 @@ const Comments = Array.from({ length: randomInt(0, 3) }, (_, idx) => ({
 
 const News = Array.from({ length: 15 }, (_, idx) => ({
   id: idx + 1,
-  title: faker.lorem.sentences(),
+  sentences: faker.lorem.sentences(),
+  words: faker.lorem.words(),
+  sentence: faker.lorem.sentence(),
 }))
 
 export { randomInt, Comments, News }

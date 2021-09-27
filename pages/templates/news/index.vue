@@ -31,7 +31,7 @@
             :src="`https://picsum.photos/id/${idx+304}/480/320`" alt="">
         </picture>
         <figcaption>
-          <h3 class="line-clamp-3 taleggio mt-4 mb-2 group-hover:text-interstellar">{{It.title}}</h3>
+          <h3 class="line-clamp-3 taleggio mt-4 mb-2 group-hover:text-interstellar">{{It.sentences}}</h3>
           <div class="parmigiano opacity-48 group-hover:opacity-64">20 апреля</div>
         </figcaption>
       </figure>
