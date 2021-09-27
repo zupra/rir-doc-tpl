@@ -25,7 +25,7 @@
   </header>
 
 
-  <img class="mt-12 mb-8 w-full shadow-lg rounded-3xl " src="https://static-maps.yandex.ru/1.x/?ll=37.677751,55.757718&spn=0.016457,0.00619&l=map&size=650,200" alt="">
+  <img class="mt-12 mb-8 w-full shadow-lg rounded-16 " src="https://static-maps.yandex.ru/1.x/?ll=37.677751,55.757718&spn=0.016457,0.00619&l=map&size=650,200" alt="">
 
 
   <div class="flex flex-wrap gap-8">

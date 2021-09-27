@@ -6,7 +6,33 @@
 
   <!-- <pre>{{News}}</pre> -->
 
-  <h1 class="cheddar mb-14">Новости</h1>
+  <h1 class="cheddar mb-4">Новости</h1>
+
+
+  <div class="flex justify-between items-center">
+    <div class="flex gap-x-2 text-white my-10">
+      <div 
+      class="bg-rocky mozzarella flex items-center space-x-1 pl-2 pr-3 py-1 rounded-full"
+      >
+        <div class="flex-shrink-0 bg-white rounded-full w-2 h-2"></div>
+        <div>Все новости</div>
+      </div>
+      <div 
+      v-for="(It,idx) in ['Город', 'Муниципальные учреждения']" :key="idx"
+      class="bg-alien mozzarella flex items-center space-x-1 pl-2 pr-3 py-1 rounded-full"
+      >
+        <div class="flex-shrink-0 bg-white opacity-16 rounded-full w-2 h-2"></div>
+        <div>{{It}}</div>
+      </div>
+    </div>
+
+    <div class="flex">
+      <div class="opacity-48">Показывать</div>
+      <div class="ml-3">За всё время</div>
+    </div>
+  </div>
+
+
 
   <div class="flex flex-wrap gap-8">
 

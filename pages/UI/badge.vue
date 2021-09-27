@@ -20,7 +20,7 @@
             v-for="clr,idx in ['rocky', 'snatch', 'drive', 'indiana ']" :key="idx"
             class="mozzarella flex items-center space-x-1 pl-2 pr-3 py-1 rounded-full"
             :class="`bg-${clr}`">
-                <div class="bg-white rounded-full w-2 h-2"></div>
+                <div class="flex-shrink-0 bg-white rounded-full w-2 h-2"></div>
                 <div>Badge</div>
             </div>
         </div>

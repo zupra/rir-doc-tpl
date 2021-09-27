@@ -31,9 +31,9 @@
       <path :d="hasSidebar ? 'M5,13L9,17L7.6,18.42L1.18,12L7.6,5.58L9,7L5,11H21V13H5M21,6V8H11V6H21M21,16V18H11V16H21Z': 'M19,13H3V11H19L15,7L16.4,5.6L22.8,12L16.4,18.4L15,17L19,13M3,6H13V8H3V6M13,16V18H3V16H13Z'"/>
     </svg>
 
-    <nav class="m-auto flex gap-x-4">
+    <nav class="topNav m-auto flex gap-x-4">
       <N-link 
-        v-for="(V,K,idx) in {'/templates/news': 'Новости', '/templates/votings': 'Голосования', '/templates/complaints': 'Обращения'}" :key="idx"
+        v-for="(V,K,idx) in {'/templates/news': 'Новости', '/templates/votings': 'Голосования', '/templates/complaints': 'Обращения', '/templates/events':'Афиша', '/templates/projects': 'Проекты'}" :key="idx"
         :to="K"
         class="pl-1 py-1 hover:text-blue-500">
         {{V}}
@@ -105,7 +105,7 @@ export default {
 } */
 
 
-.nuxt-link-active {
+.topNav .nuxt-link-active {
   @apply text-blue-600;
 }
 
