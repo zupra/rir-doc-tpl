@@ -354,8 +354,6 @@ function range(size, startAt = 1) {
 }
 
 export default defineConfig({
-
-
   safelist: [
     // range(10).map(i => `mt-${i}`), // mt-1 to mt-10
     range(9).map(i => `bg-blue-${i}00`),
@@ -392,9 +390,6 @@ export default defineConfig({
       "edam"
     ]
   ],
-
-
-
   darkMode: 'class',
   theme: {
     fontFamily: {
@@ -415,12 +410,14 @@ export default defineConfig({
       borderRadius: {
         ...RIR_borderRadius
       },
+      lineClamp: {
+        2: '2',
+        3: '3',
+        // 4: '4',
+      },
     },
   },
   // variants: {},
-
-  // 'primo gouda cheddar camembert ricotta burrata taleggio comte bryndza tulum'
-  // safelist: ['primo', 'gouda', 'cheddar', 'camembert', 'ricotta', 'burrata', 'taleggio', 'comte', 'bryndza', 'tulum'],
   extract: {
 
     exclude: [
@@ -429,7 +426,6 @@ export default defineConfig({
       'node_modules/**/*',
       '.git/**/*',
     ],
-
 
     // include: ['src/**/*.{vue,html,jsx,tsx}'],
     // exclude: ['node_modules', '.git'],
@@ -441,7 +437,8 @@ export default defineConfig({
         ...RIR_fonts
       })
     }),
-
+    require('windicss/plugin/line-clamp'),
+    require('windicss/plugin/forms'),
     require('windicss/plugin/typography'),
     require('windicss/plugin/aspect-ratio'),
     require('@windicss/plugin-scrollbar'),

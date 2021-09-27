@@ -103,7 +103,7 @@ export default {
 
 /* .nuxt-link-active {} */
 .Sidebar .nuxt-link-exact-active {
-  @apply text-blue-500 bg-gray-100;
+  @apply text-blue-600 bg-gray-100 font-bold;
 }
 
 

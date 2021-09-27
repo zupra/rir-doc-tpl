@@ -3,7 +3,7 @@
 
   <section class="w-620px mx-auto">
 
-    <N-link to="templates/news" class="parmigiano opacity-72 hover:text-blue-600">
+    <N-link to="/templates/news" class="parmigiano opacity-72 hover:text-blue-600">
       / Новости
     </N-link>
 
@@ -43,21 +43,19 @@
 
   <div class="flex flex-wrap gap-8">
 
-    <N-link to="/templates/news/item" class="Card w-1/4 h-1/2 flex-shrink flex-grow"
+    <N-link to="/templates/news/item" class="group w-1/4 h-1/2 flex-shrink flex-grow"
       v-for="It in 3"
       :key="It.id"
     >
       <figure>
         <picture class="block aspect-9/16">
           <img
-            class="shadow-lg rounded-3xl" 
+            class="shadow-lg rounded-16" 
             :src="`https://picsum.photos/id/${It+303}/480/320`" alt="">
         </picture>
         <figcaption>
-          <h3 class="taleggio mt-4 mb-2">Репетиции парада Победы в Мурманске состоятся 5 и 7 мая</h3>
-          <div class="parmigiano opacity-48">
-            20 апреля
-          </div>
+          <h3 class="taleggio mt-4 mb-2 group-hover:text-interstellar">Репетиции парада Победы в Мурманске состоятся 5 и 7 мая</h3>
+          <div class="parmigiano opacity-48 group-hover:opacity-64">20 апреля</div>
         </figcaption>
       </figure>
     </N-link>
